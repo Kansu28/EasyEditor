@@ -57,3 +57,10 @@ class ImageProcessor:
         self.saveImage()
         image_path = os.path.join(self.dir, self.save_dir, self.filename)
         self.showImage(image_path, self.lb_image)
+
+
+    def do_invert(self):
+        self.image = ImageOps.invert(self.image)
+        self.saveImage()
+        image_path = os.path.join(self.dir, self.save_dir, self.filename)
+        self.showImage(image_path, self.lb_image)
